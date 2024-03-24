@@ -26,6 +26,7 @@ export class TypeormService implements TypeOrmOptionsFactory {
         migrationsDir: join(__dirname, '../migrations'),
         entitiesDir: join(__dirname, '../**/*.entity{.ts,.js}'),
       },
+      ssl: true,
     };
   }
 }
