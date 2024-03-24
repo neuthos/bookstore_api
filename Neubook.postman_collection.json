@@ -1,0 +1,667 @@
+{
+  "info": {
+    "_postman_id": "5bc3767c-4354-4b3b-9b52-1604b4848b01",
+    "name": "Neubook",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14405527"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/users/:userId",
+              "host": ["{{host}}"],
+              "path": ["api", "users", ":userId"],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "40c887e3-74ba-40ac-98e6-c471384a1b91"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "User",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/api/users/:userId",
+                  "host": ["{{host}}"],
+                  "path": ["api", "users", ":userId"],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "40c887e3-74ba-40ac-98e6-c471384a1b91"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "218"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"da-ek1rRwpuGuPQvvdZV/LzU6jHVdc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:37:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Succeded\",\n    \"data\": {\n        \"uuid\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n        \"username\": \"galang\",\n        \"point\": \"100.00\",\n        \"created_at\": \"2024-03-24T19:36:05.569Z\",\n        \"updated_at\": \"2024-03-24T19:36:05.569Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Join (Login and Register)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"username\": \"galang\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/users/join",
+              "host": ["{{host}}"],
+              "path": ["api", "users", "join"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"username\": \"galang\" }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{host}}/api/users/join",
+                  "host": ["{{host}}"],
+                  "path": ["api", "users", "join"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "213"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d5-EltXKFFwugoSYS56BNizFq1d9nM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:36:05 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Succeded\",\n    \"data\": {\n        \"username\": \"galang\",\n        \"point\": 100,\n        \"uuid\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n        \"created_at\": \"2024-03-24T19:36:05.569Z\",\n        \"updated_at\": \"2024-03-24T19:36:05.569Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/books",
+              "host": ["{{host}}"],
+              "path": ["api", "books"]
+            }
+          },
+          "response": [
+            {
+              "name": "Books",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/api/books",
+                  "host": ["{{host}}"],
+                  "path": ["api", "books"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "6544"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1990-RwWFVcnRS/RoR1107nYs7xqjAU0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:38:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Succeded\",\n    \"data\": {\n        \"result\": [\n            {\n                \"uuid\": \"99af6560-9da1-426a-8da7-bac1a57895c0\",\n                \"title\": \"Memoirs of Hadrian\",\n                \"author\": \"Marguerite Yourcenar\",\n                \"cover_image\": \"images/memoirs-of-hadrian.jpg\",\n                \"point\": \"2.96\",\n                \"created_at\": \"2024-03-23T14:13:08.901Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.901Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"950fb376-9fd4-4a4f-b986-518daaabe78b\",\n                        \"name\": \"Medical Books\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"a434308f-89a5-4cb0-8935-75e90465c3cd\",\n                \"title\": \"To the Lighthouse\",\n                \"author\": \"Virginia Woolf\",\n                \"cover_image\": \"images/to-the-lighthouse.jpg\",\n                \"point\": \"7.59\",\n                \"created_at\": \"2024-03-23T14:13:08.890Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.890Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"e01b6aad-71b0-4d9a-bc9a-4a08b22090ea\",\n                        \"name\": \"Cookbooks, Food & Wine\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"ab19f04f-cc85-479a-a9c3-01180a98615e\",\n                \"title\": \"Mrs Dalloway\",\n                \"author\": \"Virginia Woolf\",\n                \"cover_image\": \"images/mrs-dalloway.jpg\",\n                \"point\": \"9.65\",\n                \"created_at\": \"2024-03-23T14:13:08.886Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.886Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"111e0e46-8328-41ad-bbdc-4abff53f7056\",\n                        \"name\": \"Business & Money\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"ddf3e0cf-115a-4857-815b-5ea040ec92ae\",\n                \"title\": \"Leaves of Grass\",\n                \"author\": \"Walt Whitman\",\n                \"cover_image\": \"images/leaves-of-grass.jpg\",\n                \"point\": \"4.21\",\n                \"created_at\": \"2024-03-23T14:13:08.883Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.883Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"24bb017f-c123-413d-96d2-8895decdef0d\",\n                        \"name\": \"Science & Math\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"c019b03e-1358-4201-b378-e20b43ac8dfc\",\n                \"title\": \"Mahabharata\",\n                \"author\": \"Vyasa\",\n                \"cover_image\": \"images/the-mahab-harata.jpg\",\n                \"point\": \"5.34\",\n                \"created_at\": \"2024-03-23T14:13:08.880Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.880Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"5dc2a635-5324-4d58-ad46-4b3d0fc68c5e\",\n                        \"name\": \"Test Preparation\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"e5059462-63ed-4b3f-a14a-18870a14574a\",\n                \"title\": \"The Aeneid\",\n                \"author\": \"Virgil\",\n                \"cover_image\": \"images/the-aeneid.jpg\",\n                \"point\": \"8.44\",\n                \"created_at\": \"2024-03-23T14:13:08.875Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.875Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"33b821e4-bbdb-4c7f-ba9a-cb0d1c332464\",\n                        \"name\": \"Science Fiction & Fantasy\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"adc5d362-d12e-4f3c-a962-85ac791e3dc7\",\n                \"title\": \"Ramayana\",\n                \"author\": \"Valmiki\",\n                \"cover_image\": \"images/ramayana.jpg\",\n                \"point\": \"6.85\",\n                \"created_at\": \"2024-03-23T14:13:08.869Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.869Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"c73a4101-3b5e-4f84-878c-aed1d07fbf71\",\n                        \"name\": \"Reference\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"4f931792-43a0-459f-adfd-366cc1655841\",\n                \"title\": \"The Adventures of Huckleberry Finn\",\n                \"author\": \"Mark Twain\",\n                \"cover_image\": \"images/the-adventures-of-huckleberry-finn.jpg\",\n                \"point\": \"6.89\",\n                \"created_at\": \"2024-03-23T14:13:08.863Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.863Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"74441ce1-2635-4828-93e0-5ac7782e38c0\",\n                        \"name\": \"Computers & Technology\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"1af1fe00-804f-4452-96f9-c763d9eb5434\",\n                \"title\": \"The Death of Ivan Ilyich\",\n                \"author\": \"Leo Tolstoy\",\n                \"cover_image\": \"images/the-death-of-ivan-ilyich.jpg\",\n                \"point\": \"2.70\",\n                \"created_at\": \"2024-03-23T14:13:08.860Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.860Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"e01b6aad-71b0-4d9a-bc9a-4a08b22090ea\",\n                        \"name\": \"Cookbooks, Food & Wine\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"f884b1a5-5063-43dc-a822-4199884faa58\",\n                \"title\": \"Anna Karenina\",\n                \"author\": \"Leo Tolstoy\",\n                \"cover_image\": \"images/anna-karenina.jpg\",\n                \"point\": \"5.29\",\n                \"created_at\": \"2024-03-23T14:13:08.858Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.858Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"c2027621-c7f4-46ed-afd2-d0210f49c926\",\n                        \"name\": \"Literature & Fiction\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"05ecae6a-19c8-465f-a0dc-b0386a91aa65\",\n                \"title\": \"War and Peace\",\n                \"author\": \"Leo Tolstoy\",\n                \"cover_image\": \"images/war-and-peace.jpg\",\n                \"point\": \"7.82\",\n                \"created_at\": \"2024-03-23T14:13:08.852Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.852Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"04c4c3c6-e7a7-4beb-a9ba-bc6b4dda52da\",\n                        \"name\": \"LGBTQ+ Books\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"62038e47-0a27-4e3d-a3b0-c375d46a516c\",\n                \"title\": \"Gulliver's Travels\",\n                \"author\": \"Jonathan Swift\",\n                \"cover_image\": \"images/gullivers-travels.jpg\",\n                \"point\": \"8.09\",\n                \"created_at\": \"2024-03-23T14:13:08.850Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.850Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"cc256ff9-494e-466a-aa7c-7ad46e158d11\",\n                        \"name\": \"Parenting & Relationships\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"710061df-9889-40e4-931d-403955596f07\",\n                \"title\": \"Confessions of Zeno\",\n                \"author\": \"Italo Svevo\",\n                \"cover_image\": \"images/confessions-of-zeno.jpg\",\n                \"point\": \"6.92\",\n                \"created_at\": \"2024-03-23T14:13:08.845Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.845Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"111e0e46-8328-41ad-bbdc-4abff53f7056\",\n                        \"name\": \"Business & Money\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"1033fe15-7458-42ee-b084-c995a2cfa91d\",\n                \"title\": \"The Life And Opinions of Tristram Shandy\",\n                \"author\": \"Laurence Sterne\",\n                \"cover_image\": \"images/the-life-and-opinions-of-tristram-shandy.jpg\",\n                \"point\": \"3.71\",\n                \"created_at\": \"2024-03-23T14:13:08.842Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.842Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"e01b6aad-71b0-4d9a-bc9a-4a08b22090ea\",\n                        \"name\": \"Cookbooks, Food & Wine\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"8185f9cf-8ec2-4de7-ba4b-a93c4d3858bc\",\n                \"title\": \"The Red and the Black\",\n                \"author\": \"Stendhal\",\n                \"cover_image\": \"images/le-rouge-et-le-noir.jpg\",\n                \"point\": \"7.89\",\n                \"created_at\": \"2024-03-23T14:13:08.837Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.837Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"04c4c3c6-e7a7-4beb-a9ba-bc6b4dda52da\",\n                        \"name\": \"LGBTQ+ Books\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"630a18f6-49a8-43e8-98e6-d89f5683b155\",\n                \"title\": \"Oedipus the King\",\n                \"author\": \"Sophocles\",\n                \"cover_image\": \"images/oedipus-the-king.jpg\",\n                \"point\": \"4.18\",\n                \"created_at\": \"2024-03-23T14:13:08.830Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.830Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"f664c93e-354e-4bc2-8754-904ade2d3ff3\",\n                        \"name\": \"Mystery, Thriller & Suspense\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"39a09ff3-4144-49df-bb71-8f627da233fc\",\n                \"title\": \"Othello\",\n                \"author\": \"William Shakespeare\",\n                \"cover_image\": \"images/othello.jpg\",\n                \"point\": \"5.93\",\n                \"created_at\": \"2024-03-23T14:13:08.826Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.826Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"04c4c3c6-e7a7-4beb-a9ba-bc6b4dda52da\",\n                        \"name\": \"LGBTQ+ Books\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"bfa2b770-42bc-48a9-8cd6-8b6570e23897\",\n                \"title\": \"King Lear\",\n                \"author\": \"William Shakespeare\",\n                \"cover_image\": \"images/king-lear.jpg\",\n                \"point\": \"4.82\",\n                \"created_at\": \"2024-03-23T14:13:08.824Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.824Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"2805c222-1c53-4386-a80a-ea5504fd925e\",\n                        \"name\": \"Calendars\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"f1962f89-e40d-401c-815e-1e33d3116051\",\n                \"title\": \"Hamlet\",\n                \"author\": \"William Shakespeare\",\n                \"cover_image\": \"images/hamlet.jpg\",\n                \"point\": \"8.65\",\n                \"created_at\": \"2024-03-23T14:13:08.820Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.820Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"1d0b9284-a7c0-4ab5-9249-49402ac2237e\",\n                        \"name\": \"Sports & Outdoors\"\n                    }\n                ]\n            },\n            {\n                \"uuid\": \"af364182-0fa3-4dff-ac0a-7e450b0f62ef\",\n                \"title\": \"Blindness\",\n                \"author\": \"José Saramago\",\n                \"cover_image\": \"images/blindness.jpg\",\n                \"point\": \"1.55\",\n                \"created_at\": \"2024-03-23T14:13:08.817Z\",\n                \"updated_at\": \"2024-03-23T14:13:08.817Z\",\n                \"tags\": [\n                    {\n                        \"uuid\": \"c97af90d-791b-42a2-94d7-0fe038307da6\",\n                        \"name\": \"Education & Teaching\"\n                    }\n                ]\n            }\n        ],\n        \"hasMore\": true\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Initial Books data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/books/initial",
+              "host": ["{{host}}"],
+              "path": ["api", "books", "initial"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Tags",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/api/tags",
+              "host": ["{{host}}"],
+              "path": ["api", "tags"]
+            }
+          },
+          "response": [
+            {
+              "name": "Tags",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/api/tags",
+                  "host": ["{{host}}"],
+                  "path": ["api", "tags"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2474"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"9aa-er5/DUVZH3SdQ9wffdZOfxOpIGQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:39:40 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Succeded\",\n    \"data\": [\n        {\n            \"uuid\": \"e4f60bb9-f309-4e13-b26b-e19c54ba8fda\",\n            \"name\": \"Arts & Photography\"\n        },\n        {\n            \"uuid\": \"1694a8f8-d13f-4419-93a1-9109f80a6b2e\",\n            \"name\": \"Biographies & Memoirs\"\n        },\n        {\n            \"uuid\": \"111e0e46-8328-41ad-bbdc-4abff53f7056\",\n            \"name\": \"Business & Money\"\n        },\n        {\n            \"uuid\": \"2805c222-1c53-4386-a80a-ea5504fd925e\",\n            \"name\": \"Calendars\"\n        },\n        {\n            \"uuid\": \"45f12295-7100-4ad1-953f-8ba21c078f38\",\n            \"name\": \"Children Books\"\n        },\n        {\n            \"uuid\": \"9bd75de4-a039-4643-ab01-7be403d25975\",\n            \"name\": \"Christian Books & Bibles\"\n        },\n        {\n            \"uuid\": \"12b406d4-3fe5-4e78-ac1d-9abcc36da229\",\n            \"name\": \"Comics & Graphic Novels\"\n        },\n        {\n            \"uuid\": \"74441ce1-2635-4828-93e0-5ac7782e38c0\",\n            \"name\": \"Computers & Technology\"\n        },\n        {\n            \"uuid\": \"e01b6aad-71b0-4d9a-bc9a-4a08b22090ea\",\n            \"name\": \"Cookbooks, Food & Wine\"\n        },\n        {\n            \"uuid\": \"d5665897-45de-4b75-a70d-7da54796cbaf\",\n            \"name\": \"Crafts, Hobbies & Home\"\n        },\n        {\n            \"uuid\": \"c97af90d-791b-42a2-94d7-0fe038307da6\",\n            \"name\": \"Education & Teaching\"\n        },\n        {\n            \"uuid\": \"211e3851-6185-4af2-8b20-767e905b3ce1\",\n            \"name\": \"Engineering & Transportation\"\n        },\n        {\n            \"uuid\": \"553de0d0-0f34-4800-92aa-fa5d9ec90aba\",\n            \"name\": \"Health, Fitness & Dieting\"\n        },\n        {\n            \"uuid\": \"6331c2f6-afd5-4334-b81a-ac42b6cd66e9\",\n            \"name\": \"History\"\n        },\n        {\n            \"uuid\": \"45f9428b-5e1a-4883-a7f2-6129444afa0c\",\n            \"name\": \"Humor & Entertainment\"\n        },\n        {\n            \"uuid\": \"efae1197-bd7b-44a5-82f2-4664f99db489\",\n            \"name\": \"Law\"\n        },\n        {\n            \"uuid\": \"04c4c3c6-e7a7-4beb-a9ba-bc6b4dda52da\",\n            \"name\": \"LGBTQ+ Books\"\n        },\n        {\n            \"uuid\": \"c2027621-c7f4-46ed-afd2-d0210f49c926\",\n            \"name\": \"Literature & Fiction\"\n        },\n        {\n            \"uuid\": \"950fb376-9fd4-4a4f-b986-518daaabe78b\",\n            \"name\": \"Medical Books\"\n        },\n        {\n            \"uuid\": \"f664c93e-354e-4bc2-8754-904ade2d3ff3\",\n            \"name\": \"Mystery, Thriller & Suspense\"\n        },\n        {\n            \"uuid\": \"cc256ff9-494e-466a-aa7c-7ad46e158d11\",\n            \"name\": \"Parenting & Relationships\"\n        },\n        {\n            \"uuid\": \"2a8d3e53-79a0-4b83-ab9d-2bc55f1502d7\",\n            \"name\": \"Politics & Social Sciences\"\n        },\n        {\n            \"uuid\": \"c73a4101-3b5e-4f84-878c-aed1d07fbf71\",\n            \"name\": \"Reference\"\n        },\n        {\n            \"uuid\": \"62a854e4-062e-4bf9-b669-23f47f8f5c6a\",\n            \"name\": \"Religion & Spirituality\"\n        },\n        {\n            \"uuid\": \"ff03a7d7-cd15-4799-a306-8eb0228f2d3e\",\n            \"name\": \"Romance\"\n        },\n        {\n            \"uuid\": \"24bb017f-c123-413d-96d2-8895decdef0d\",\n            \"name\": \"Science & Math\"\n        },\n        {\n            \"uuid\": \"33b821e4-bbdb-4c7f-ba9a-cb0d1c332464\",\n            \"name\": \"Science Fiction & Fantasy\"\n        },\n        {\n            \"uuid\": \"a86eb265-34b7-430c-8ae6-747e3adcef7c\",\n            \"name\": \"Self-Help\"\n        },\n        {\n            \"uuid\": \"1d0b9284-a7c0-4ab5-9249-49402ac2237e\",\n            \"name\": \"Sports & Outdoors\"\n        },\n        {\n            \"uuid\": \"69291f8d-8150-4c57-bc43-dabcf749ec76\",\n            \"name\": \"Teen & Young Adult\"\n        },\n        {\n            \"uuid\": \"5dc2a635-5324-4d58-ad46-4b3d0fc68c5e\",\n            \"name\": \"Test Preparation\"\n        },\n        {\n            \"uuid\": \"cede955f-07a8-47e9-af91-65a364efc2f1\",\n            \"name\": \"Travel\"\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "User Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "userId",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{host}}/api/orders/user/:userId?status=PENDING",
+              "host": ["{{host}}"],
+              "path": ["api", "orders", "user", ":userId"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "PENDING",
+                  "description": "PENDING | SUCCESS | FAILED"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "5a4c5da6-d3f2-4a24-96f5-fe863bdda618"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "User Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "userId",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "url": {
+                  "raw": "{{host}}/api/orders/user/:userId?status=PENDING",
+                  "host": ["{{host}}"],
+                  "path": ["api", "orders", "user", ":userId"],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "PENDING",
+                      "description": "PENDING | SUCCESS | FAILED"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "5a4c5da6-d3f2-4a24-96f5-fe863bdda618"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2626"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"a42-fG4sxy0PJSkChSHhRTwx1nKj4eA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:41:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Succeded\",\n    \"data\": [\n        {\n            \"uuid\": \"a0bddaa5-3077-42bc-a099-8509a3a351e8\",\n            \"user_id\": \"5a4c5da6-d3f2-4a24-96f5-fe863bdda618\",\n            \"invoice_code\": \"INV202403255896053541\",\n            \"total\": \"9.65\",\n            \"status\": \"PENDING\",\n            \"is_paid\": false,\n            \"created_at\": \"2024-03-24T19:09:16.187Z\",\n            \"updated_at\": \"2024-03-24T19:09:16.187Z\",\n            \"orderDetails\": [\n                {\n                    \"uuid\": \"a75a7651-b26b-4201-a436-6166c256754b\",\n                    \"order_id\": \"a0bddaa5-3077-42bc-a099-8509a3a351e8\",\n                    \"book_id\": \"ab19f04f-cc85-479a-a9c3-01180a98615e\",\n                    \"book_price\": \"9.65\",\n                    \"created_at\": \"2024-03-24T19:09:16.187Z\",\n                    \"updated_at\": \"2024-03-24T19:09:16.187Z\",\n                    \"book\": {\n                        \"uuid\": \"ab19f04f-cc85-479a-a9c3-01180a98615e\",\n                        \"title\": \"Mrs Dalloway\",\n                        \"author\": \"Virginia Woolf\",\n                        \"cover_image\": \"images/mrs-dalloway.jpg\",\n                        \"point\": \"9.65\",\n                        \"created_at\": \"2024-03-23T14:13:08.886Z\",\n                        \"updated_at\": \"2024-03-23T14:13:08.886Z\",\n                        \"tags\": [\n                            {\n                                \"uuid\": \"111e0e46-8328-41ad-bbdc-4abff53f7056\",\n                                \"name\": \"Business & Money\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        {\n            \"uuid\": \"ec53a9f7-461f-47eb-b3fc-ba15b1610a5a\",\n            \"user_id\": \"5a4c5da6-d3f2-4a24-96f5-fe863bdda618\",\n            \"invoice_code\": \"INV202403254904870927\",\n            \"total\": \"9.65\",\n            \"status\": \"PENDING\",\n            \"is_paid\": false,\n            \"created_at\": \"2024-03-24T19:09:07.371Z\",\n            \"updated_at\": \"2024-03-24T19:09:07.371Z\",\n            \"orderDetails\": [\n                {\n                    \"uuid\": \"7c455b27-9de8-421f-be63-e1ae29bd5509\",\n                    \"order_id\": \"ec53a9f7-461f-47eb-b3fc-ba15b1610a5a\",\n                    \"book_id\": \"ab19f04f-cc85-479a-a9c3-01180a98615e\",\n                    \"book_price\": \"9.65\",\n                    \"created_at\": \"2024-03-24T19:09:07.371Z\",\n                    \"updated_at\": \"2024-03-24T19:09:07.371Z\",\n                    \"book\": {\n                        \"uuid\": \"ab19f04f-cc85-479a-a9c3-01180a98615e\",\n                        \"title\": \"Mrs Dalloway\",\n                        \"author\": \"Virginia Woolf\",\n                        \"cover_image\": \"images/mrs-dalloway.jpg\",\n                        \"point\": \"9.65\",\n                        \"created_at\": \"2024-03-23T14:13:08.886Z\",\n                        \"updated_at\": \"2024-03-23T14:13:08.886Z\",\n                        \"tags\": [\n                            {\n                                \"uuid\": \"111e0e46-8328-41ad-bbdc-4abff53f7056\",\n                                \"name\": \"Business & Money\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        {\n            \"uuid\": \"f79bbb2e-313f-4f89-ac12-cbb23019d208\",\n            \"user_id\": \"5a4c5da6-d3f2-4a24-96f5-fe863bdda618\",\n            \"invoice_code\": \"INV202403250407203561\",\n            \"total\": \"2.96\",\n            \"status\": \"PENDING\",\n            \"is_paid\": false,\n            \"created_at\": \"2024-03-24T18:18:24.578Z\",\n            \"updated_at\": \"2024-03-24T18:18:24.578Z\",\n            \"orderDetails\": [\n                {\n                    \"uuid\": \"d9897f24-f3c0-4691-a277-20a0a270e44e\",\n                    \"order_id\": \"f79bbb2e-313f-4f89-ac12-cbb23019d208\",\n                    \"book_id\": \"99af6560-9da1-426a-8da7-bac1a57895c0\",\n                    \"book_price\": \"2.96\",\n                    \"created_at\": \"2024-03-24T18:18:24.578Z\",\n                    \"updated_at\": \"2024-03-24T18:18:24.578Z\",\n                    \"book\": {\n                        \"uuid\": \"99af6560-9da1-426a-8da7-bac1a57895c0\",\n                        \"title\": \"Memoirs of Hadrian\",\n                        \"author\": \"Marguerite Yourcenar\",\n                        \"cover_image\": \"images/memoirs-of-hadrian.jpg\",\n                        \"point\": \"2.96\",\n                        \"created_at\": \"2024-03-23T14:13:08.901Z\",\n                        \"updated_at\": \"2024-03-23T14:13:08.901Z\",\n                        \"tags\": [\n                            {\n                                \"uuid\": \"950fb376-9fd4-4a4f-b986-518daaabe78b\",\n                                \"name\": \"Medical Books\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "userId",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"userId\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\", \"bookId\": \"99af6560-9da1-426a-8da7-bac1a57895c0\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/orders",
+              "host": ["{{host}}"],
+              "path": ["api", "orders"]
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "userId",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"userId\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n    \"bookId\": \"99af6560-9da1-426a-8da7-bac1a57895c0\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{host}}/api/orders",
+                  "host": ["{{host}}"],
+                  "path": ["api", "orders"]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "553"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"229-fwgFmorFBoXNW9VVB3NiooGyZ2c\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:42:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Order created successfully\",\n    \"data\": {\n        \"msg\": \"Order created successfully\",\n        \"order\": {\n            \"uuid\": \"54d48eec-a7ae-4c7e-8dd7-cae57e18fe35\",\n            \"user\": {\n                \"uuid\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n                \"username\": \"galang\",\n                \"point\": \"100.00\",\n                \"created_at\": \"2024-03-24T19:36:05.569Z\",\n                \"updated_at\": \"2024-03-24T19:36:05.569Z\"\n            },\n            \"invoice_code\": \"INV2024032512626281614\",\n            \"total\": 2.96,\n            \"user_id\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n            \"status\": \"PENDING\",\n            \"is_paid\": false,\n            \"created_at\": \"2024-03-24T19:42:50.625Z\",\n            \"updated_at\": \"2024-03-24T19:42:50.625Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Order Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "userId",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"status\": \"SUCCESS\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}/api/orders/:orderId/status",
+              "host": ["{{host}}"],
+              "path": ["api", "orders", ":orderId", "status"],
+              "variable": [
+                {
+                  "key": "orderId",
+                  "value": "54d48eec-a7ae-4c7e-8dd7-cae57e18fe35"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Success",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "userId",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"status\": \"SUCCESS\" }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{host}}/api/orders/:orderId/status",
+                  "host": ["{{host}}"],
+                  "path": ["api", "orders", ":orderId", "status"],
+                  "variable": [
+                    {
+                      "key": "orderId",
+                      "value": "09e7fd53-5142-4edb-8aba-842ac6bb17b0"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "344"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"158-Z2/BGLSbdD57zaSNhVZPw2peXh4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 Mar 2024 19:44:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"msg\": \"Order status updated successfully\",\n    \"data\": {\n        \"uuid\": \"09e7fd53-5142-4edb-8aba-842ac6bb17b0\",\n        \"user_id\": \"40c887e3-74ba-40ac-98e6-c471384a1b91\",\n        \"invoice_code\": \"INV2024032513880690800\",\n        \"total\": \"2.96\",\n        \"status\": \"SUCCESS\",\n        \"is_paid\": true,\n        \"created_at\": \"2024-03-24T19:44:18.273Z\",\n        \"updated_at\": \"2024-03-24T19:44:18.273Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "host",
+      "value": "http://localhost:4000",
+      "type": "string"
+    }
+  ]
+}

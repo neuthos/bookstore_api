@@ -1,3 +1,4 @@
+import { OrderDetail } from 'src/modules/orders/entities/order-detail.entity';
 import { Tag } from 'src/modules/tags/entites/tag.entity';
 import {
   Entity,
@@ -7,9 +8,10 @@ import {
   JoinTable,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
 
-@Entity()
+@Entity('books')
 export class Book {
   @PrimaryGeneratedColumn('uuid')
   uuid: string;
@@ -18,7 +20,7 @@ export class Book {
   title: string;
 
   @Column({ type: 'varchar', nullable: false })
-  writer: string;
+  author: string;
 
   @Column({ type: 'text', nullable: false })
   cover_image: string;
@@ -45,4 +47,7 @@ export class Book {
     },
   })
   tags: Tag[];
+
+  @OneToMany(() => OrderDetail, (order) => order.book)
+  orderDetails: OrderDetail[];
 }

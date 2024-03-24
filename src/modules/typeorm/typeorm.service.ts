@@ -2,18 +2,20 @@ import { Injectable } from '@nestjs/common';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import { join } from 'path';
 import type { TypeOrmOptionsFactory } from '@nestjs/typeorm';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class TypeormService implements TypeOrmOptionsFactory {
+  constructor(private readonly configService: ConfigService) {}
+
   public createTypeOrmOptions(): PostgresConnectionOptions {
     return {
       type: 'postgres',
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT as unknown as number,
-      database: process.env.DB_NAME,
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-
+      host: this.configService.get('DB_HOST'),
+      port: this.configService.get('DB_PORT'),
+      database: this.configService.get('DB_NAME'),
+      username: this.configService.get('DB_USERNAME'),
+      password: this.configService.get('DB_PASSWORD'),
       entities: [join(__dirname, '../**/*.entity{.ts,.js}')],
       synchronize: false,
       dropSchema: false,

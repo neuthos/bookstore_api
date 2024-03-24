@@ -17,12 +17,14 @@ export class ResponseInterceptor<T>
     next: CallHandler,
   ): Observable<HttpSuccessResponse<T>> {
     return next.handle().pipe(
-      map((data: DataResponse) => ({
-        success: true,
-        status: 200,
-        msg: data.msg ?? 'Request Success',
-        data: data.data ? data.data : null,
-      })),
+      map((res: DataResponse) => {
+        return {
+          success: true,
+          status: 200,
+          msg: res?.msg ?? 'Succeded',
+          data: res?.data ? res.data : res,
+        };
+      }),
     );
   }
 }

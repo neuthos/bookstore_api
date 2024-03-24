@@ -5,6 +5,7 @@ export class AppConfig {
   public static getInitConifg(): ConfigModuleOptions {
     return {
       isGlobal: true,
+      envFilePath: ['.env'],
       validationSchema: Joi.object(<
         { [P in keyof NodeJS.ProcessEnv]: Joi.SchemaInternals }
       >{

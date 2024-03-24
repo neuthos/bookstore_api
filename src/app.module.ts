@@ -14,6 +14,8 @@ import {
 import { ResponseInterceptor } from './interceptor/response.interceptor';
 import { ConfigModule } from '@nestjs/config';
 import { AppConfig } from './app.config';
+import { UsersModule } from './modules/users/users.module';
+import { OrdersModule } from './modules/orders/orders.module';
 
 @Module({
   imports: [
@@ -23,6 +25,8 @@ import { AppConfig } from './app.config';
     }),
     BooksModule,
     TagsModule,
+    UsersModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [

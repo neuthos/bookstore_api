@@ -1,7 +1,6 @@
 export interface HttpSuccessResponse<T> {
   readonly success: boolean;
   readonly status: number;
-  readonly msg: string;
   readonly data: T;
 }
 
