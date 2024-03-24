@@ -117,9 +117,6 @@ export class OrdersService {
       await this.userService.deductUserPoint(user, +order.total);
       order.is_paid = true;
     }
-    if (order.status === 'FAILED') {
-      await this.userService.addUserPoint(user, +order.total);
-    }
 
     return this.orderRepo.save(order);
   }
